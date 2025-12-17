@@ -7,7 +7,7 @@ This is for Unity games built in IL2Cpp, this guide will not work for Mono games
 Let's get into it
 
 ![Made by ApolloVulpez](https://img.shields.io/badge/Made%20by-ApolloVulpez-blue)
-![Version](https://img.shields.io/badge/Version-1.0.0-blue)
+![Version](https://img.shields.io/badge/Version-1.0.5-blue)
 
 ## Required Dependencies/references for developing with Photon
 
