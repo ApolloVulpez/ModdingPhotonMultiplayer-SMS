@@ -53,7 +53,9 @@ Here is an example event handler setup for receiving messages from the host or o
         // Our middleman handler, when Photon receives an event, 
         // this runs our event handler while also calling the original event handler. 
         // This allows us to allow Photons' normal events to flow past, while also simultaneously 
-        // listening in for any events we actually want to react to. 
+        // listening in for any events we actually want to react to.
+        // The eventdata is a lambda that runs when an event is called. This is what is allowing all events to flow using ?. If it's not null. 
+        // It also runs our event handler to basically check if the event is relevant to us. As you'll see later
            var _photonHandler =
                Il2CppInterop.Runtime.DelegateSupport
                     .ConvertDelegate<Il2CppSystem.Action<EventData>>(
