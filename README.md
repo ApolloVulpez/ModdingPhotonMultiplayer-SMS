@@ -165,17 +165,17 @@ This includes:
 - Object References
 - Json Serialised Object lists
 
-> Small tip: A method to allow communication strictly between host and a specific client - You can use "UserID" in "PlayerInstance" (This is specific to SMS, but may exist in other Unity games), then use the client UserID as a reply event code and receiving event code when the host sends data 
+> Small tip: A method to allow communication strictly between the host and a specific client - You can use "UserID" in "PlayerInstance" (This is specific to SMS, but may exist in other Unity games), then use the client UserID as a reply event code and receiving event code when the host sends data 
 
 A plain text would be something like
 
-- Client: Hey host, I require the JSON data for the current racks in the building. Can you send it? My userID is 444321 
+- Client: Hey, host, I require the JSON data for the current racks in the building. Can you send it? My userID is 444321 
 (Begins listening for events that use ID 44321)
 - Host: Of course (Fires event with rack JSON data using event data ID 444321)
 - Client: (Picks up on the event fired from the host and now has the data it required)
 
 None of the other clients should pick up on this exchange because their userIDs should be different :)
->Take this with a grain of salt of course, this will be a lot more complicate in an actual code block this is only an example as its outside of scope for this info packet
+>Take this with a grain of salt; of course, this will be a lot more complicated in an actual code block. This is only an example, as it's outside of scope for this info packet
 
 # Small tutorial for a basic way to determine if the player is the host or a client.
 
